@@ -11,11 +11,16 @@ import {
   today_ymd,
   today_ymdhms,
   today_ymdhmsms,
+  plus,
+  minus,
+  multiply,
+  divide,
+  objectToParams,
 } from "common_modules";
 export default function Home() {
   return (
     <div>
-      <table style={{ border: "3px solid black" }}>
+      <table>
         <tr>
           <td style={{ textAlign: "center" }} colSpan={4}>
             <b>날짜</b>
@@ -93,6 +98,56 @@ export default function Home() {
           <td>오늘의 날짜 y-m-d h:m:s:ms</td>
           <td>:</td>
           <td>{today_ymdhmsms()}</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td style={{ textAlign: "center" }} colSpan={4}>
+            <b>계산</b>
+          </td>
+        </tr>
+        <tr>
+          <td>1.</td>
+          <td>더하기</td>
+          <td>:</td>
+          <td>{plus(99999999999999999999, 1)}</td>
+        </tr>
+        <tr>
+          <td>1.</td>
+          <td>빼기</td>
+          <td>:</td>
+          <td>{minus(1, 99999999999999999999)}</td>
+        </tr>
+        <tr>
+          <td>1.</td>
+          <td>곱하기</td>
+          <td>:</td>
+          <td>{multiply(1, 99999999999999999999)}</td>
+        </tr>
+        <tr>
+          <td>1.</td>
+          <td>나누기</td>
+          <td>:</td>
+          <td>{divide(99999999999999999999, 1)}</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td style={{ textAlign: "center" }} colSpan={4}>
+            <b>Axios</b>
+          </td>
+        </tr>
+        <tr>
+          <td>1.</td>
+          <td>파라미터</td>
+          <td>:</td>
+          <td>
+            {objectToParams({
+              name: "홍길도",
+              age: "23",
+              tel: "010-4107-2433",
+            })}
+          </td>
         </tr>
       </table>
     </div>

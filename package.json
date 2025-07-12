@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/common_modules": "file:../common_modules_types",
+    "axios": "^1.10.0",
     "common_modules": "file:../common_modules",
     "lodash": "^4.17.21",
     "next": "15.3.5",
